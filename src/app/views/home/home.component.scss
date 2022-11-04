@@ -1,0 +1,168 @@
+@import '../../../config-scss/variaveis.scss';
+
+.main-header {
+
+    display: flex;
+    width: 100%;
+    //  height:;
+    background-color: var(--verde-300);
+    justify-content: center;
+}
+
+.main-body {
+
+    display:flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--branco);
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.incluir-btn{
+    display:flex;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--branco);
+    justify-content: center;
+    flex-direction: row;   
+}
+
+.top-bar {
+    background-color: var(--verde-300);
+    color: var(--branco);
+    max-width: 1440px;
+
+}
+
+.sessao {
+    
+    width: 1440px;
+    height: 100%;
+    color: var(--branco);
+    background-color: var(--branco);
+    max-width: 1440px;
+    flex-direction: column;
+    justify-content: center;
+    //max-height: 500px;
+}
+
+.sessao-btn{
+    
+    width: 10px;
+    height: 100%;
+    color: var(--branco);
+    background-color: aqua;
+    max-width: 1440px;
+    flex-direction: column;
+    justify-content: center;
+    //max-height: 500px;
+
+}
+
+
+.incluir-pessoa {
+    display: flex;
+    width: 1440px;
+    color: var(--branco);
+    background-color: var(--branco);;
+    max-width: 1440px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box-incluir-pessoa {
+    margin-top: 24px;
+    padding: 24px;
+    display: flex;
+    width: 1340px;
+    height: 100%;
+    color: #3f51b5;
+    font-weight: bold;
+    background-color: rgb(252, 252, 252);
+    max-width: 1440px;
+    justify-content: center;
+    flex-direction: column;
+    
+    border-style: solid;
+    border-color: #3f51b5;
+    border-top-width: 0.5rem;;
+    border-left-width: 0.2rem;
+    border-right-width: 0.2rem;
+    border-bottom-width: 0.2rem;
+    border-radius: 5px;
+
+    mat-radio-button {
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+
+    span{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size:1.0rem;
+    }
+
+}
+
+
+
+.content {
+    background-color: var(--branco);
+    padding: 1.5rem;
+}
+
+section {
+    display: table;
+}
+
+.label {
+    color: var(--branco);
+    background-color: #3f51b5;
+}
+
+.chekin-container {
+    font-family: var;
+    background-color: #3f51b5;
+    margin-top: 1.5rem;
+    border-style: solid;
+    border-color: #3f51b5;
+    border-top-width: 0.5rem;
+    border-left-width: 0.1rem;
+    border-right-width: 0.1rem;
+    border-bottom-width: 0.1rem;
+    border-radius: 5px;
+    flex-direction: row;
+}
+
+.chekin-content {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffff;
+    max-width: 100%;
+    height: 200px;
+    padding: 0px;
+    justify-content: space-between;
+
+}
+
+.button-row {
+    margin-top: 24px;
+    ;
+    margin-left: 24px;
+}
+
+.cancelButton{
+    margin-left:1rem;
+    background-color: red;
+    color: aliceblue;
+}
+
+.box-esquerda{
+    margin-left: 0px;
+
+}

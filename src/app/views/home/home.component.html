@@ -1,0 +1,140 @@
+<div class="main-header">
+    <mat-toolbar class="top-bar">
+        <img src="/assets/senior-logo.png" width="200" alt="">
+    </mat-toolbar>
+</div>
+
+<div class="incluir-btn">
+    <div class="sessao">
+        <div class="button-row">
+            <button mat-raised-button color="primary" (click)="adicionarPessoa()">Incluir pessoa</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="main-body">
+    <div class="sessao">
+        <mat-divider></mat-divider>
+        <div class="incluir-pessoa" *ngIf="this.isActive">
+
+            <div class="box-incluir-pessoa">
+                <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+                    <p style="color: #3f51b5; font-weight: bold;">Dados da pessoa</p>
+
+                    <p>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Nome</mat-label>
+                            <input matInput formControlName="nome">
+                        </mat-form-field>
+                    </p>
+
+                    <p>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Documento</mat-label>
+                            <input matInput formControlName="documento">
+                        </mat-form-field>
+                    </p>
+                    s
+                    <p>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Telefone</mat-label>
+                            <input matInput formControlName="telefone">
+                        </mat-form-field>
+                    </p>
+
+                    <div>
+                        <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Salvar</button>
+                        <button mat-raised-button color="red" class="cancelButton"
+                            (click)="cancelar()">Cancelar</button>
+                    </div>
+
+
+
+
+                </form>
+
+            </div>
+        </div>
+        <br>
+        <mat-divider *ngIf="this.isActive"></mat-divider>
+
+        <div class="incluir-pessoa">
+
+            <div class="box-incluir-pessoa">
+                <p style="color: #3f51b5; font-weight: bold;">Novo Chekin</p>
+
+                <div class="chekin-content">
+                    <div class="box-esquerda">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Data de Entrada</mat-label>
+                            <input matInput [matDatepicker]="entrada">
+                            <mat-datepicker-toggle matSuffix [for]="entrada"></mat-datepicker-toggle>
+                            <mat-datepicker #entrada></mat-datepicker>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Hora da entrada</mat-label>
+                            <input matInput type="time" formControlName="hora" name="hora" #time>
+                        </mat-form-field>
+                        <div>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Pessoa</mat-label>
+                                <input matInput placeholder="Nome" value="">
+                            </mat-form-field>
+                        </div>
+                        <p>
+                            <button mat-raised-button color="primary" (click)="salvarPessoa()">Salvar</button>
+                        </p>
+
+                    </div>
+
+                    <div class="box-direita">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Data de Saida</mat-label>
+                            <input matInput [matDatepicker]="saida">
+                            <mat-datepicker-toggle matSuffix [for]="saida"></mat-datepicker-toggle>
+                            <mat-datepicker #saida></mat-datepicker>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Hora da Saida</mat-label>
+                            <input matInput type="time" formControlName="hora" name="hora" #time>
+                        </mat-form-field>
+
+                        <section class="example-section">
+                            <mat-checkbox color="primary">Possui veículo</mat-checkbox>
+
+                        </section>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <br>
+        <mat-divider></mat-divider>
+        <div class="incluir-pessoa">
+            <div class="box-incluir-pessoa">
+                <p style="color: #3f51b5; font-weight: bold;">Consulta</p>
+
+
+                <mat-radio-group color="primary">
+                    <span>Filtrar por: </span>
+                    <mat-radio-button value="1">Pessoas ainda presente </mat-radio-button>
+
+                    <mat-radio-button value="2">Pessoas que já deixaram o hotel
+                    </mat-radio-button>
+                </mat-radio-group>
+
+
+
+
+                <br>
+                <app-list></app-list>
+            </div>
+        </div>
+    </div>
+</div>
